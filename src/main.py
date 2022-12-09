@@ -6,7 +6,6 @@ import random
 
 app = Flask(__name__)
 
-
 def get_recipe_info(url):
     html_page = requests.get(url).text
     soup = BeautifulSoup(html_page, 'html.parser')
@@ -83,15 +82,19 @@ recipes = json.load(f)
 
 # pseudo test cases just to see if the parser works
 # tests all the following links in the urls list
-urls = recipes["breakfast"]["regular"] 
-    # recipes["dessert"]["vegan"]
-    # check breakfast/dessert vegan recipes: missing images
-    # missing dinner vegan recipe links!!
-try:
-    for url in urls:
-        print(get_recipe_info(url), "\n")
-except:
-    print("\033[91m" + "Error on url: " + url + "\033[0m")
+# urls = recipes["breakfast"]["regular"] + \
+#     recipes["breakfast"]["vegan"] + \
+#     recipes["lunch"]["regular"] + \
+#     recipes["lunch"]["vegan"] + \
+#     recipes["dinner"]["regular"] + \
+#     recipes["dinner"]["vegan"] + \
+#     recipes["dessert"]["regular"] + \
+#     recipes["dessert"]["vegan"]
+# try:
+#     for url in urls:
+#         print(get_recipe_info(url), "\n")
+# except:
+#     print("\033[91m" + "Error on url: " + url + "\033[0m")
 
 
 @app.route('/breakfast')  # Flask uses GET method by default
