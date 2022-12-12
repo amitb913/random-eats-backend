@@ -1,6 +1,6 @@
 # Random Eats (Backend) - CS 545
 
-This repo contains the backend (written in Python using Flask) for Random Eats. It uses beautifulsoup4 to scrape data from recipe webpages on allrecipes.com and parse them into an organized dict/object.
+This repo contains the backend (written in Python using Flask) for Random Eats. It uses beautifulsoup4 to scrape data from recipe webpages on allrecipes.com and parse them into an organized dict/object. If you are looking for the repo for the frontend, you can access it [here](https://github.com/amitb913/random-eats).
 
 The backend has 4 endpoints:
 
